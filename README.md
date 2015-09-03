@@ -1,3 +1,3 @@
 # XperimentalHashAlgorithm
-Xperimantal Hashing Algorithm and use of the STL unordered_map
+Xperimental Hashing Algorithm and use of the STL unordered_map
 Epsilon AgentX
