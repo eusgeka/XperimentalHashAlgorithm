@@ -12,40 +12,35 @@
 using namespace std;
 
 namespace std {
-    class Key
-    {
+    class Key {
+    private:
+        std::string m_strFirst;
+        std::string m_strSecond;
+        int m_intThird;
     public:
-        std::string first;
-        std::string second;
-        int         third;
-    public:
-        bool operator==(const Key &k) const
-        {
-            return (first == k.first
-                    && second == k.second
-                    && third == k.third);
+        bool operator==(const Key &k) const {
+            return (m_strFirst == k.m_strFirst
+                    && m_strSecond == k.m_strSecond
+                    && m_intThird == k.m_intThird);
         }
 
-        void prepareKey(std::string kone, std::string ktwo, int kthree)
-        {
-            first.clear();
-            first.append(kone.c_str());
-            second.clear();
-            second.append(ktwo.c_str());
-            third = kthree;
+        void prepareKey(std::string kone, std::string ktwo, int kthree) {
+            m_strFirst.clear();
+            m_strFirst.append(kone.c_str());
+            m_strSecond.clear();
+            m_strSecond.append(ktwo.c_str());
+            m_intThird = kthree;
         }
 
-        std::string getFirst() const {return first;}
-        std::string getSecond() const {return second;}
-        int getThird() const {return third;}
+        std::string getFirst() const {return m_strFirst;}
+        std::string getSecond() const {return m_strSecond;}
+        int getThird() const {return m_intThird;}
     };
 
     template <>
-    class hash<Key>
-    {
+    class hash<Key> {
     public:
-        std::size_t operator()(const Key& k) const
-        {
+        std::size_t operator()(const Key& k) const {
             //using std::size_t;
             //using std::hash;
             //using std::string;
@@ -58,14 +53,12 @@ namespace std {
                    ^ (hash<int>()(k.getThird()) << 1);
         }
     };
-
 }
 
 /**
  * @brief The CUnOrderMap class
  */
-class UnOrderMap
-{
+class UnOrderMap {
 private:
     std::unordered_map<Key, std::pair<std::string, std::string>> m_hMap;
     int m_third;
@@ -75,17 +68,14 @@ public:
     ~UnOrderMap();
 
     void Add(std::string strValueFname, std::string strValueLName);
-    unsigned int hash_str(const char* s)
-    {
+    unsigned int hash_str(const char* s) {
        unsigned h = 31 /* also prime */;
        while (*s) {
-         h = (h * A_PRIME) ^ (s[0] * B_PRIME);
+         h = (h * A_PRIME) ^ (static_cast<unsigned int>(s[0]) * B_PRIME);
          s++;
        }
        return h % C_PRIME;
     }
-
-
 };
 
 #endif // UNORDERMAP_H

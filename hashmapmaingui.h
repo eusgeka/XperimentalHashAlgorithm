@@ -17,7 +17,7 @@ private:
 
 
 public:
-    explicit HashMapMainGui(QWidget *parent = 0);
+    explicit HashMapMainGui(QWidget *parent = nullptr);
     ~HashMapMainGui();
 
 private slots:
