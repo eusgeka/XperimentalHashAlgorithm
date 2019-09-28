@@ -1,9 +1,9 @@
-#ifndef HASHMAPMAINGUI_H
-#define HASHMAPMAINGUI_H
+#ifndef HASHMAPMAINGUI_HPP
+#define HASHMAPMAINGUI_HPP
 
 #include <QMainWindow>
 
-#include "unordermap.h"
+#include "unordermap.hpp"
 
 namespace Ui {
 class HashMapMainGui;
@@ -31,4 +31,4 @@ private:
     Ui::HashMapMainGui *ui;
 };
 
-#endif // HASHMAPMAINGUI_H
+#endif // HASHMAPMAINGUI_HPP

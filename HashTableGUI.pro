@@ -18,7 +18,7 @@ SOURCES += main.cpp\
     unordermap.cpp
 
 HEADERS  += \
-    hashmapmaingui.h \
-    unordermap.h
+    hashmapmaingui.hpp \
+    unordermap.hpp
 
 FORMS    += hashmapmaingui.ui

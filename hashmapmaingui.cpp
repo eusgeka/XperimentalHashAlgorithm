@@ -1,4 +1,4 @@
-#include "hashmapmaingui.h"
+#include "hashmapmaingui.hpp"
 #include "ui_hashmapmaingui.h"
 
 HashMapMainGui::HashMapMainGui(QWidget *parent) :

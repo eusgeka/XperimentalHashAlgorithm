@@ -1,5 +1,6 @@
-#include "hashmapmaingui.h"
 #include <QApplication>
+
+#include "hashmapmaingui.hpp"
 
 int main(int argc, char *argv[])
 {

@@ -1,5 +1,5 @@
-#ifndef UNORDERMAP_H
-#define UNORDERMAP_H
+#ifndef UNORDERMAP_HPP
+#define UNORDERMAP_HPP
 
 
 #include <string>
@@ -78,4 +78,4 @@ public:
     }
 };
 
-#endif // UNORDERMAP_H
+#endif // UNORDERMAP_HPP
