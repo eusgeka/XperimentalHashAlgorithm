@@ -67,7 +67,7 @@ public:
     UnOrderMap();
     ~UnOrderMap();
 
-    void Add(std::string strValueFname, std::string strValueLName);
+    void add(std::string strValueFname, std::string strValueLName);
     unsigned int hash_str(const char* s) {
        unsigned h = 31 /* also prime */;
        while (*s) {

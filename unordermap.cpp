@@ -5,16 +5,14 @@ using namespace std;
 /**
  * @brief UnOrderMap::UnOrderMap
  */
-UnOrderMap::UnOrderMap()
-{
+UnOrderMap::UnOrderMap() {
     m_third = 0;
 }
 
 /**
  * @brief CUnOrderMap::~CUnOrderMap
  */
-UnOrderMap::~UnOrderMap()
-{
+UnOrderMap::~UnOrderMap() {
 
 }
 
@@ -23,11 +21,10 @@ UnOrderMap::~UnOrderMap()
  * @param nKey
  * @param nValue
  */
-void UnOrderMap::Add(std::string strValueFname, std::string strValueLName)
-{
+void UnOrderMap::add(std::string strValueFname, std::string strValueLName) {
     Key key;
-    m_third = hash_str(strValueFname.c_str()) +
-                hash_str(strValueLName.c_str());
+    m_third = static_cast<int>(hash_str(strValueFname.c_str()) +
+                hash_str(strValueLName.c_str()));
     key.prepareKey(strValueFname, strValueLName, m_third);
     std::pair<std::string, std::string> firstAndLastName(strValueFname,
                                                          strValueLName);
