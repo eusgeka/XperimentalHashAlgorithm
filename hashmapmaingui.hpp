@@ -1,9 +1,9 @@
-#ifndef HASHMAPMAINGUI_H
-#define HASHMAPMAINGUI_H
+#ifndef HASHMAPMAINGUI_HPP
+#define HASHMAPMAINGUI_HPP
 
 #include <QMainWindow>
 
-#include "unordermap.h"
+#include "unordermap.hpp"
 
 namespace Ui {
 class HashMapMainGui;
@@ -17,7 +17,7 @@ private:
 
 
 public:
-    explicit HashMapMainGui(QWidget *parent = 0);
+    explicit HashMapMainGui(QWidget *parent = nullptr);
     ~HashMapMainGui();
 
 private slots:
@@ -27,8 +27,10 @@ private slots:
 
     void on_btnInsert_clicked();
 
+    void on_btnShowMap_clicked();
+
 private:
     Ui::HashMapMainGui *ui;
 };
 
-#endif // HASHMAPMAINGUI_H
+#endif // HASHMAPMAINGUI_HPP

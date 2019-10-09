@@ -15,9 +15,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         hashmapmaingui.cpp \
+    hashmaptableview.cpp \
     unordermap.cpp
 
-HEADERS  += hashmapmaingui.h \
-    unordermap.h
+HEADERS  += \
+    hashmapmaingui.hpp \
+    hashmaptableview.hpp \
+    unordermap.hpp
 
-FORMS    += hashmapmaingui.ui
+FORMS    += hashmapmaingui.ui \
+    hashmaptableview.ui
