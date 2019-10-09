@@ -76,6 +76,19 @@
      <string>Last Name :</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btnShowMap">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>90</y>
+      <width>90</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show Map</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

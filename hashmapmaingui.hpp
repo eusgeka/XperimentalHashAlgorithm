@@ -27,6 +27,8 @@ private slots:
 
     void on_btnInsert_clicked();
 
+    void on_btnShowMap_clicked();
+
 private:
     Ui::HashMapMainGui *ui;
 };

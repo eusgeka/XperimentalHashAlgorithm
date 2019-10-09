@@ -4,9 +4,9 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    HashMapMainGui w;
-    w.show();
+    QApplication qApplication(argc, argv);
+    HashMapMainGui hashMapMainGui;
+    hashMapMainGui.show();
 
-    return a.exec();
+    return qApplication.exec();
 }

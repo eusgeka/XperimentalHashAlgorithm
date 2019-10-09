@@ -60,12 +60,14 @@ namespace std {
  */
 class UnOrderMap {
 private:
-    std::unordered_map<Key, std::pair<std::string, std::string>> m_hMap;
+    //std::unordered_map<Key, std::pair<std::string, std::string>> m_hMap;
     int m_third;
 
 public:
     UnOrderMap();
     ~UnOrderMap();
+
+    std::unordered_map<Key, std::pair<std::string, std::string>> m_hMap;
 
     void add(std::string strValueFname, std::string strValueLName);
     unsigned int hash_str(const char* s) {
